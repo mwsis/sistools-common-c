@@ -1,0 +1,2 @@
+Common C helper functions and utilities shared across sistools programs.
+Copyright (c) 2020-2026, Matthew Wilson and Synesis Information Systems
