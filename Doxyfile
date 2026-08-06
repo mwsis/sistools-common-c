@@ -1,0 +1,50 @@
+# Doxyfile for sistools-common-c (C API)
+
+PROJECT_NAME           = "sistools-common-c"
+PROJECT_BRIEF          = "Common C helper functions and utilities shared across sistools programs"
+PROJECT_NUMBER         = 0.0.0
+
+# Overridden at generation time by generate_doxygen.sh (respects SIS_CMAKE_BUILD_DIR).
+OUTPUT_DIRECTORY       = _build/doxygen
+CREATE_SUBDIRS         = NO
+
+INPUT                  = include/sistools \
+                         doc
+FILE_PATTERNS          = *.h \
+                         *.md
+RECURSIVE              = YES
+EXCLUDE                =
+
+USE_MDFILE_AS_MAINPAGE = doc/mainpage.md
+
+EXTRACT_ALL            = YES
+EXTRACT_PRIVATE        = NO
+EXTRACT_STATIC         = NO
+HIDE_UNDOC_MEMBERS     = NO
+HIDE_UNDOC_CLASSES     = NO
+
+GENERATE_HTML          = YES
+GENERATE_LATEX         = NO
+HTML_OUTPUT            = html
+
+GENERATE_TREEVIEW      = YES
+DISABLE_INDEX          = NO
+SEARCHENGINE           = YES
+SOURCE_BROWSER         = YES
+REFERENCED_BY_RELATION = YES
+REFERENCES_RELATION    = YES
+
+MARKDOWN_SUPPORT       = YES
+JAVADOC_AUTOBRIEF      = YES
+QUIET                  = YES
+
+WARN_IF_UNDOCUMENTED   = YES
+WARN_NO_PARAMDOC       = YES
+WARN_IF_DOC_ERROR      = YES
+
+MACRO_EXPANSION        = YES
+EXPAND_ONLY_PREDEF     = YES
+PREDEFINED             = STCC_CALL(rt)=rt \
+                         STCC_NOEXCEPT=
+
+# ########################### end of file ########################### #

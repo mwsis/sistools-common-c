@@ -7,6 +7,7 @@
 - [Building](#building)
 	- [via CMake](#via-cmake)
 - [Using the library](#using-the-library)
+- [API documentation](#api-documentation)
 
 
 ## Requisites
@@ -99,6 +100,18 @@ target_link_libraries(your_target
 		sistools-common-c::core
 )
 ```
+
+
+## API documentation
+
+HTML API documentation can be generated with **Doxygen** (must be on
+`PATH`):
+
+```bash
+$ ./generate_doxygen.sh
+```
+
+Output is written to `${SIS_CMAKE_BUILD_DIR:-./_build}/doxygen/html/`.
 
 
 <!-- ########################### end of file ########################### -->

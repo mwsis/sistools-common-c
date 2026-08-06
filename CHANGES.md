@@ -1,6 +1,11 @@
 # sistools-common-c - Changes <!-- omit in toc -->
 
 
+## 0.0.1 - 7th August 2026
+
+* **Doxygen** support: **Doxyfile**, **doc/mainpage.md**, **generate_doxygen.sh**;
+
+
 ## 0.0.0 - 7th August 2026
 
 * Initial release: project scaffolding for the shared **sistools** C helpers library;
