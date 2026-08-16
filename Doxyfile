@@ -2,7 +2,7 @@
 
 PROJECT_NAME           = "sistools-common-c"
 PROJECT_BRIEF          = "Common C helper functions and utilities shared across sistools programs"
-PROJECT_NUMBER         = 0.0.0
+PROJECT_NUMBER         = 0.1.0
 
 # Overridden at generation time by generate_doxygen.sh (respects SIS_CMAKE_BUILD_DIR).
 OUTPUT_DIRECTORY       = _build/doxygen

@@ -2,6 +2,8 @@
 
 include(CMakeFindDependencyMacro)
 
+find_dependency(STLSoft)
+find_dependency(CLASP)
 find_dependency(Diagnosticism)
 
 include("${CMAKE_CURRENT_LIST_DIR}/@EXPORT_NAME@-targets.cmake")

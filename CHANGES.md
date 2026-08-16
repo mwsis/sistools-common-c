@@ -1,6 +1,15 @@
 # sistools-common-c - Changes <!-- omit in toc -->
 
 
+## 0.1.0 - 16th August 2026
+
+* Added usage helpers (**`include/sistools/common/usage.h`**, **`src/usage.c`**): **`stcc_show_version()`**, **`stcc_show_help()`** (from **mksock** helpers);
+* Required dependencies extended: **CLASP**, **STLSoft** (in addition to **Diagnosticism**);
+* Unit test **test.unit.usage**;
+* MSVC: suppress CRT secure deprecation (**C4996** / **`/wd4996`**) so **`tmpfile()`**-using unit tests compile with warnings-as-errors;
+* TinyCC: **`stcc_show_help()`** uses a Unix **`ioctl`** / **`COLUMNS`** console-width fallback (**STLSoft** still rejects TinyCC after **`_STLSOFT_FORCE_ANY_COMPILER`**);
+
+
 ## 0.0.1 - 7th August 2026
 
 * **Doxygen** support: **Doxyfile**, **doc/mainpage.md**, **generate_doxygen.sh**;

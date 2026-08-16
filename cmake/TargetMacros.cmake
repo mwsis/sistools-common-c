@@ -5,7 +5,7 @@
 # Purpose:  Helper macros/functions for defining targets
 #
 # Created:  7th August 2026
-# Updated:  7th August 2026
+# Updated:  16th August 2026
 #
 # ######################################################################## #
 
@@ -46,6 +46,7 @@ macro(define_target_compile_options target_name)
 			$<$<CXX_COMPILER_ID:MSVC>:
 				/WX /W4
 
+				/wd4996
 				${X_MSVC_CUSTOM_WARNINGS_}
 			>
 	)

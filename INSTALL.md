@@ -16,11 +16,12 @@ Installation requires **CMake** (3.20 or later) and a supported C toolchain.
 
 **sistools-common-c** depends on:
 
+* [**CLASP**](https://github.com/synesissoftware/CLASP);
 * [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism);
+* [**STLSoft**](https://github.com/synesissoftware/STLSoft);
 
 Building the project's unit tests additionally requires:
 
-* [**STLSoft**](https://github.com/synesissoftware/STLSoft);
 * [**xTests**](https://github.com/synesissoftware/xTests);
 
 > **NOTE**: if you do not wish to build the tests, then you need not

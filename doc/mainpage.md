@@ -8,7 +8,7 @@
 | Unit | File(s) | Summary |
 | ---- | ------- | ------- |
 | Public umbrella API | `include/sistools/common.h` | Version macros, `stcc_uint32_t`, and `stcc_api_version()` |
-| Specific headers | `include/sistools/common/` | Reserved for forthcoming shared helpers |
+| Usage helpers | `include/sistools/common/usage.h`, `src/usage.c` | `stcc_show_version()`, `stcc_show_help()` |
 
 
 ## Quick start

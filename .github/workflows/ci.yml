@@ -6,6 +6,7 @@ on:
       - master
       - dev
       - boilerplate
+      - usage
       - fix
       - rc1
       - rc2

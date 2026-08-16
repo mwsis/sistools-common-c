@@ -110,6 +110,13 @@ jobs:
             fi
           }
 
+          # STLSoft (required for the core library and for CLASP)
+          STLSRC="${RUNNER_TEMP}/stlsoft-src"
+          STLBUILD="${RUNNER_TEMP}/stlsoft-build"
+          git clone --depth 1 https://github.com/synesissoftware/STLSoft "$STLSRC"
+          cmake_configure "$STLSRC" "$STLBUILD"
+          cmake_build_install "$STLBUILD"
+
           # Diagnosticism (required for the core library)
           DIAGSRC="${RUNNER_TEMP}/diagnosticism-src"
           DIAGBUILD="${RUNNER_TEMP}/diagnosticism-build"
@@ -117,14 +124,14 @@ jobs:
           cmake_configure "$DIAGSRC" "$DIAGBUILD"
           cmake_build_install "$DIAGBUILD"
 
-          if [ "${{ inputs.run-tests }}" = "true" ]; then
-            # STLSoft (required when BUILD_TESTING=ON)
-            STLSRC="${RUNNER_TEMP}/stlsoft-src"
-            STLBUILD="${RUNNER_TEMP}/stlsoft-build"
-            git clone --depth 1 https://github.com/synesissoftware/STLSoft "$STLSRC"
-            cmake_configure "$STLSRC" "$STLBUILD"
-            cmake_build_install "$STLBUILD"
+          # CLASP (required for usage helpers)
+          CLASPSRC="${RUNNER_TEMP}/clasp-src"
+          CLASPBUILD="${RUNNER_TEMP}/clasp-build"
+          git clone --depth 1 https://github.com/synesissoftware/CLASP "$CLASPSRC"
+          cmake_configure "$CLASPSRC" "$CLASPBUILD"
+          cmake_build_install "$CLASPBUILD"
 
+          if [ "${{ inputs.run-tests }}" = "true" ]; then
             # xTests (test-only)
             XTSRC="${RUNNER_TEMP}/xtests-src"
             XTBUILD="${RUNNER_TEMP}/xtests-build"

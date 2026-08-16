@@ -94,7 +94,37 @@ The following public functions are defined in the current version:
 /** Obtains the sistools-common-c version (at time of compilation). */
 stcc_uint32_t
 stcc_api_version(void);
+
+/** Emits the Diagnosticism-based version line used by `--version`. */
+void
+stcc_show_version(
+    FILE*       stm
+,   char const* toolName
+,   int         verMajor
+,   int         verMinor
+,   int         verPatch
+,   int         verAlphaBeta
+);
+
+/** Emits CLASP-like usage (custom header + clasp_showBody). */
+void
+stcc_show_help(
+    clasp_arguments_t const*    args
+,   clasp_alias_t const*        specifications
+,   FILE*                       stm
+,   char const*                 toolName
+,   char const*                 summary
+,   char const*                 copyright
+,   char const*                 description
+,   char const*                 usage
+,   int                         verMajor
+,   int                         verMinor
+,   int                         verPatch
+,   int                         verAlphaBeta
+);
 ```
+
+Usage helpers are also available via `#include <sistools/common/usage.h>` (included from the umbrella header).
 
 
 ### Macros
@@ -140,14 +170,15 @@ Defect reports, feature requests, and pull requests are welcome on [the **sistoo
 
 ### Dependencies
 
+* [**CLASP**](https://github.com/synesissoftware/CLASP);
 * [**Diagnosticism**](https://github.com/synesissoftware/Diagnosticism);
+* [**STLSoft**](https://github.com/synesissoftware/STLSoft);
 
 
 #### Development/Testing Dependencies
 
 For unit-testing, **sistools-common-c** depends additionally on:
 
-* [**STLSoft**](https://github.com/synesissoftware/STLSoft);
 * [**xTests**](https://github.com/synesissoftware/xTests);
 
 

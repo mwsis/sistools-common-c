@@ -4,7 +4,7 @@
  * Purpose: Main header file for sistools-common-c (C-API).
  *
  * Created: 7th August 2026
- * Updated: 7th August 2026
+ * Updated: 16th August 2026
  *
  * Home:    https://github.com/sistools/sistools-common-c/
  *
@@ -49,9 +49,9 @@
 
 #ifndef STCC_DOCUMENTATION_SKIP_SECTION
 # define STCC_VER_SISTOOLS_H_COMMON_MAJOR  0
-# define STCC_VER_SISTOOLS_H_COMMON_MINOR  0
-# define STCC_VER_SISTOOLS_H_COMMON_PATCH  1
-# define STCC_VER_SISTOOLS_H_COMMON_EDIT   3
+# define STCC_VER_SISTOOLS_H_COMMON_MINOR  1
+# define STCC_VER_SISTOOLS_H_COMMON_PATCH  0
+# define STCC_VER_SISTOOLS_H_COMMON_EDIT   5
 #endif /* !STCC_DOCUMENTATION_SKIP_SECTION */
 
 
@@ -78,7 +78,7 @@
  */
 
 #define STCC_VER_MAJOR          0
-#define STCC_VER_MINOR          0
+#define STCC_VER_MINOR          1
 #define STCC_VER_PATCH          0
 #define STCC_VER_ALPHABETA      0xFF
 
@@ -147,6 +147,13 @@ typedef uint32_t                                            stcc_uint32_t;
  */
 STCC_CALL(stcc_uint32_t)
 stcc_api_version(void) STCC_NOEXCEPT;
+
+
+/* /////////////////////////////////////////////////////////////////////////
+ * includes - 2 (convenience)
+ */
+
+#include <sistools/common/usage.h>
 
 
 /* /////////////////////////////////////////////////////////////////////////

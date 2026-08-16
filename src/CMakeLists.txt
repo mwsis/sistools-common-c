@@ -5,7 +5,7 @@
 # Purpose:  CMake lists file for sistools-common-c core library
 #
 # Created:  7th August 2026
-# Updated:  7th August 2026
+# Updated:  16th August 2026
 #
 # ######################################################################## #
 
@@ -49,6 +49,7 @@ endif(MSVC)
 set(COMMON_IMPLEMENTATION_FILES
 
 	sistools-common-c.c
+	usage.c
 )
 
 add_library(core
@@ -67,7 +68,9 @@ target_include_directories(core
 
 target_link_libraries(core
 	PUBLIC
+		CLASP::core
 		Diagnosticism::core
+		$<$<STREQUAL:${STLSOFT_INCLUDE_DIR},>:STLSoft::STLSoft>
 )
 
 target_compile_options(core
@@ -78,6 +81,8 @@ target_compile_options(core
 		>
 		$<$<CXX_COMPILER_ID:MSVC>:
 			/WX /W4
+
+			/wd4996
 		>
 )
 
